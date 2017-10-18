@@ -4,13 +4,14 @@ import pprint
 import math
 import sys
 import copy
+def getstats():
+	basevalue = random.randint(10, 16)
+	return statvalue
 
-racestatranges = {
-	"orc": {"strength": random.randint(14,18), "dexterity": random.randint(12,16), "constitution": random.randint(12,18), "intelligence": random.randint(8,12), "wisdom": random.randint(10,14), "charisma": random.randint(8,12), "reflex": "GoodMod", "fort": "GoodMod", "will": "BadMod", "BaseAttack": "full"},
-	"goblin": {"strength": random.randint(8,14), "dexterity": random.randint(12,16), "constitution": random.randint(10,14), "intelligence": random.randint(10,14), "wisdom": random.randint(10,14), "charisma": random.randint(8,12), "reflex": "GoodMod", "fort": "BadMod", "will": "BadMod", "BaseAttack": "third"},
-	"human": {"strength": random.randint(10,16), "dexterity": random.randint(10,16), "constitution": random.randint(10,16), "intelligence": random.randint(10,16), "wisdom": random.randint(10,16), "charisma": random.randint(10,16), "reflex": "GoodMod", "fort": "BadMod", "will": "BadMod", "BaseAttack": "third"},
-	"kobold": {"strength": random.randint(8,14), "dexterity": random.randint(12,16), "constitution": random.randint(10,14), "intelligence": random.randint(10,14), "wisdom": random.randint(10,14), "charisma": random.randint(8,12), "reflex": "GoodMod", "fort": "BadMod", "will": "BadMod", "BaseAttack": "half"},
-	"gnoll": {"strength": random.randint(14,18), "dexterity": random.randint(12,16), "constitution": random.randint(12,18), "intelligence": random.randint(8,12), "wisdom": random.randint(10,14), "charisma": random.randint(8,12), "reflex": "GoodMod", "fort": "GoodMod", "will": "BadMod", "BaseAttack": "full"}
+racemods = {
+	"orc": {"strength": 2, "constitution": 2, "charisma": -2},
+	"goblin": {"strength": -2, "dexterity": 2, "wisdom": 2},
+	"kobold": {"strength": -2, "dexterity": 2, "intelligence": 2},
 }
 
 savedict = {

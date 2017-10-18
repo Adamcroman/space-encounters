@@ -1,3 +1,5 @@
+from ship_data.shipmaneuver import manuver_table
+
 shipframes = {
 	"Racer": {
 		"cost": 4,
